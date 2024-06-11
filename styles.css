@@ -1,0 +1,43 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("assets/bg.png");
+    background-size: cover;
+}
+
+.dock {
+    background-color: rgba(119, 136, 153, 0.5);
+    border-radius: 10px;
+    height: fit-content;
+    width: fit-content;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+}
+
+.dock img {
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s;
+}
+
+.dock img:hover {
+    transform: scale(1.2) translateY(-10px);
+}
+
+.sticky-note {
+    background-color: darkkhaki;
+    height: 200px;
+    width: 200px;
+    border: 1px solid #000;
+    resize: both;
+    overflow: hidden;
+}
+
+.sticky-note-bar {
+    background-color: yellow;
+}
