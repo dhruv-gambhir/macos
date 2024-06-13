@@ -29,7 +29,7 @@ body {
     transform: scale(1.2) translateY(-10px);
 }
 
-.sticky-note {
+#stickyNote {
     background-color: darkkhaki;
     height: 200px;
     width: 200px;
@@ -38,6 +38,17 @@ body {
     overflow: hidden;
 }
 
-.sticky-note-bar {
+#sticky-note-bar {
     background-color: yellow;
+}
+
+.draggable {
+    position: absolute;
+    user-select: none;
+    cursor: grab;
+    font-size: 21px;
+}
+
+.draggable:active {
+    cursor: grabbing;
 }
