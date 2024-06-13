@@ -17,6 +17,8 @@ element.addEventListener("mousedown", (event) => {
     pos.offsetY = element.offsetTop;
     element.addEventListener("mousemove", (event) => {});
     element.addEventListener("mouseup", (event) => {
-        alert("mouse lifted");
+        element.removeEventListener("mousedown", (event) => {
+            alert("mouse lifted");
+        });
     });
 });
