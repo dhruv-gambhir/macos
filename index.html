@@ -2,26 +2,30 @@
 <html>
     <head>
         <title>Gambhir Dhruv</title>
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body>
-        <div class="content">
-            <h1>hi</h1>
-            <div class="draggable" id="stickyNote">
-                <div id="stickyNoteBar">
-                    <button id="closeButton">x</button>
-                </div>
-                <div> Hello there. </div>
+        <div class="draggable" id="stickyApp">
+            <div id="stickyBar">
+                <button id="stickyCloseButton">x</button>
             </div>
+            <textarea>Hello World!</textarea>
+        </div>
+
+        <div id="weatherApp" class="draggable">
+            <div id="weatherBar">
+                <button id="weatherCloseButton">x</button>
+            </div>
+            <div>Hi </div>
         </div>
         <div class="dock">
             <img src="./assets/icons/37_finder.png" />
-            <img src="./assets/icons/01_weather.png" />
+            <img src="./assets/icons/01_weather.png" id="weatherIcon" />
             <img src="./assets/icons/04_tv+.png" />
             <img src="./assets/icons/06_text-edit.png" />
             <img src="./assets/icons/07_terminal.png" />
             <img src="./assets/icons/15_safari.png" />
-            <img src="./assets/icons/22_stickies.png" id="stickyApp" />
+            <img src="./assets/icons/22_stickies.png" id="stickyIcon" />
             <img src="./assets/icons/10_siri.png" />
             <img src="./assets/icons/24_music.png" />
         </div>

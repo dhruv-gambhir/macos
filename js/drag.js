@@ -1,4 +1,4 @@
-const element = document.querySelector(".draggable");
+const elements = document.querySelectorAll(".draggable");
 
 const pos = {
     x: 0,
@@ -9,39 +9,47 @@ const pos = {
 
 let isDragging = false;
 
-element.addEventListener("mousedown", (event) => {
-    const computedStyle = window.getComputedStyle(element);
-    const resizeHandleSize = 10;
+elements.forEach((element) => {
+    element.addEventListener("mousedown", (event) => {
+        const computedStyle = window.getComputedStyle(element);
+        const resizeHandleSize = 10;
 
-    const offsetRight = parseInt(computedStyle.width) - event.offsetX;
-    const offsetBottom = parseInt(computedStyle.height) - event.offsetY;
+        const offsetRight = parseInt(computedStyle.width) - event.offsetX;
+        const offsetBottom = parseInt(computedStyle.height) - event.offsetY;
 
-    if (offsetRight <= resizeHandleSize && offsetBottom <= resizeHandleSize) {
-        return;
-    }
+        if (
+            offsetRight <= resizeHandleSize &&
+            offsetBottom <= resizeHandleSize
+        ) {
+            return;
+        }
 
-    isDragging = true;
-    pos.x = event.clientX;
-    pos.y = event.clientY;
-    pos.offsetX = element.offsetLeft;
-    pos.offsetY = element.offsetTop;
+        const prevZIndex = parseInt(element.style.zIndex, 10) || 0;
+        element.style.zIndex = prevZIndex + 1;
 
-    const onMouseMove = (moveEvent) => {
-        if (!isDragging) return;
+        isDragging = true;
+        pos.x = event.clientX;
+        pos.y = event.clientY;
+        pos.offsetX = element.offsetLeft;
+        pos.offsetY = element.offsetTop;
 
-        const dx = moveEvent.clientX - pos.x;
-        const dy = moveEvent.clientY - pos.y;
+        const onMouseMove = (moveEvent) => {
+            if (!isDragging) return;
 
-        element.style.left = `${pos.offsetX + dx}px`;
-        element.style.top = `${pos.offsetY + dy}px`;
-    };
+            const dx = moveEvent.clientX - pos.x;
+            const dy = moveEvent.clientY - pos.y;
 
-    const onMouseUp = () => {
-        isDragging = false;
-        document.removeEventListener("mousemove", onMouseMove);
-        document.removeEventListener("mouseup", onMouseUp);
-    };
+            element.style.left = `${pos.offsetX + dx}px`;
+            element.style.top = `${pos.offsetY + dy}px`;
+        };
 
-    document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener("mouseup", onMouseUp);
+        const onMouseUp = () => {
+            isDragging = false;
+            document.removeEventListener("mousemove", onMouseMove);
+            document.removeEventListener("mouseup", onMouseUp);
+        };
+
+        document.addEventListener("mousemove", onMouseMove);
+        document.addEventListener("mouseup", onMouseUp);
+    });
 });
