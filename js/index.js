@@ -5,6 +5,9 @@ const stickyNote = document.getElementById("stickyApp");
 const weatherIcon = document.getElementById("weatherIcon");
 const weatherApp = document.getElementById("weatherApp");
 const currentAppMenuButton = document.getElementById("currentAppMenuButton");
+const stickyAppDropDown = document.getElementById("stickyAppDropDown");
+const voiceMemoCloseButton = document.getElementById("voiceMemoCloseButton");
+const voiceMemoApp = document.getElementById("voiceMemoApp");
 
 stickyCloseButton.addEventListener("click", () => {
     stickyNote.style.display = "none";
@@ -21,4 +24,20 @@ weatherCloseButton.addEventListener("click", () => {
 
 weatherIcon.addEventListener("click", () => {
     weatherApp.style.display = "block";
+});
+
+currentAppMenuButton.addEventListener("click", () => {
+    if (stickyAppDropDown.style.display == "none") {
+        stickyAppDropDown.style.display == "block";
+    } else {
+        stickyAppDropDown.style.display == "none";
+    }
+});
+
+voiceMemoIcon.addEventListener("click", () => {
+    voiceMemoApp.style.display = "block";
+});
+
+voiceMemoCloseButton.addEventListener("click", () => {
+    voiceMemoApp.style.display = "none";
 });

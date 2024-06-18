@@ -18,6 +18,7 @@
     background-color: lightgray;
     opacity: 50;
     width: 100px;
+    display: none;
 }
 
 #stickyAppDropDown button {

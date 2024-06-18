@@ -11,19 +11,6 @@ let isDragging = false;
 
 elements.forEach((element) => {
     element.addEventListener("mousedown", (event) => {
-        const computedStyle = window.getComputedStyle(element);
-        const resizeHandleSize = 10;
-
-        const offsetRight = parseInt(computedStyle.width) - event.offsetX;
-        const offsetBottom = parseInt(computedStyle.height) - event.offsetY;
-
-        if (
-            offsetRight <= resizeHandleSize &&
-            offsetBottom <= resizeHandleSize
-        ) {
-            return;
-        }
-
         const prevZIndex = parseInt(element.style.zIndex, 10) || 0;
         element.style.zIndex = prevZIndex + 1;
 

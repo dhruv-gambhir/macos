@@ -1,8 +1,7 @@
 #stickyApp {
     border: 1px solid #000;
-    width: 100px;
-    height: 100px;
-    resize: both;
+    width: 200px;
+    height: 200px;
     overflow: hidden;
     z-index: 0;
     top: 100px;
@@ -45,7 +44,6 @@
     width: 100px;
     background-color: azure;
     display: none;
-    resize: both;
     overflow: hidden;
     z-index: 0;
 }
@@ -55,4 +53,13 @@
     height: 200px;
     background-color: black;
     color: white;
+    top: 100px;
+    left: 50px;
+    display: none;
+}
+
+#voiceMemoBar {
+    background-color: gray;
+    height: 20px;
+    width: 100%;
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Gambhir Dhruv</title>
+        <title>macOS clone</title>
         <link rel="stylesheet" href="./css/styles.css" />
         <link rel="stylesheet" href="./css/menubar.css" />
         <link rel="stylesheet" href="./css/apps.css" />
@@ -37,9 +37,11 @@
                 <div>Hi </div>
             </div>
 
-            <div id="voiceMemoApp">
-                <div id="voiceMemoBar"></div>
-                <div>hello</div>
+            <div id="voiceMemoApp" class="draggable">
+                <div id="voiceMemoBar">
+                    <button id="voiceMemoCloseButton">x</button>
+                </div>
+                <div>Voice Memos</div>
             </div>
 
             <div class="dock">
@@ -50,7 +52,9 @@
                 <img src="./assets/icons/07_terminal.png" />
                 <img src="./assets/icons/15_safari.png" />
                 <img src="./assets/icons/22_stickies.png" id="stickyIcon" />
-                <img src="./assets/icons/03_voice-memos.png" />
+                <img
+                    src="./assets/icons/03_voice-memos.png"
+                    id="voiceMemoIcon" />
                 <img src="./assets/icons/24_music.png" />
             </div>
         </div>
