@@ -1,0 +1,25 @@
+#menubar {
+    top: 0;
+    left: 0;
+    background-color: gray;
+    opacity: 50;
+    height: 20px;
+    width: 100%;
+}
+
+#menubar button {
+    background-color: transparent;
+    border: none;
+}
+
+#stickyAppDropDown {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    opacity: 50;
+    width: 100px;
+}
+
+#stickyAppDropDown button {
+    width: 100px;
+}

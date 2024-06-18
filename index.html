@@ -3,31 +3,56 @@
     <head>
         <title>Gambhir Dhruv</title>
         <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./css/menubar.css" />
+        <link rel="stylesheet" href="./css/apps.css" />
     </head>
     <body>
-        <div class="draggable" id="stickyApp">
-            <div id="stickyBar">
-                <button id="stickyCloseButton">x</button>
-            </div>
-            <textarea>Hello World!</textarea>
+        <div id="menubar">
+            <button id="logo"
+                ><img style="height: 15px; width: 30px" src="./assets/logo.png"
+            /></button>
+            <button id="currentAppMenuButton">Findr</button>
+            <button>File</button>
+            <button>Edit</button>
+            <button>View</button>
+            <button>Tools</button>
         </div>
+        <div id="stickyAppDropDown">
+            <button>New Note</button>
+            <button>Colors ></button>
+            <button>Settings</button>
+        </div>
+        <div id="content">
+            <div class="draggable" id="stickyApp">
+                <div id="stickyBar">
+                    <button id="stickyCloseButton"></button>
+                </div>
+                <textarea>Hello World!</textarea>
+            </div>
 
-        <div id="weatherApp" class="draggable">
-            <div id="weatherBar">
-                <button id="weatherCloseButton">x</button>
+            <div id="weatherApp" class="draggable">
+                <div id="weatherBar">
+                    <button id="weatherCloseButton">x</button>
+                </div>
+                <div>Hi </div>
             </div>
-            <div>Hi </div>
-        </div>
-        <div class="dock">
-            <img src="./assets/icons/37_finder.png" />
-            <img src="./assets/icons/01_weather.png" id="weatherIcon" />
-            <img src="./assets/icons/04_tv+.png" />
-            <img src="./assets/icons/06_text-edit.png" />
-            <img src="./assets/icons/07_terminal.png" />
-            <img src="./assets/icons/15_safari.png" />
-            <img src="./assets/icons/22_stickies.png" id="stickyIcon" />
-            <img src="./assets/icons/10_siri.png" />
-            <img src="./assets/icons/24_music.png" />
+
+            <div id="voiceMemoApp">
+                <div id="voiceMemoBar"></div>
+                <div>hello</div>
+            </div>
+
+            <div class="dock">
+                <img src="./assets/icons/37_finder.png" />
+                <img src="./assets/icons/01_weather.png" id="weatherIcon" />
+                <img src="./assets/icons/04_tv+.png" />
+                <img src="./assets/icons/06_text-edit.png" />
+                <img src="./assets/icons/07_terminal.png" />
+                <img src="./assets/icons/15_safari.png" />
+                <img src="./assets/icons/22_stickies.png" id="stickyIcon" />
+                <img src="./assets/icons/03_voice-memos.png" />
+                <img src="./assets/icons/24_music.png" />
+            </div>
         </div>
 
         <script src="./js/drag.js"></script>

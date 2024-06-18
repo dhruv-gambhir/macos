@@ -4,6 +4,7 @@ const stickyApp = document.getElementById("stickyIcon");
 const stickyNote = document.getElementById("stickyApp");
 const weatherIcon = document.getElementById("weatherIcon");
 const weatherApp = document.getElementById("weatherApp");
+const currentAppMenuButton = document.getElementById("currentAppMenuButton");
 
 stickyCloseButton.addEventListener("click", () => {
     stickyNote.style.display = "none";
@@ -11,6 +12,7 @@ stickyCloseButton.addEventListener("click", () => {
 
 stickyApp.addEventListener("click", () => {
     stickyNote.style.display = "block";
+    currentAppMenuButton.textContent = "Stickies";
 });
 
 weatherCloseButton.addEventListener("click", () => {
