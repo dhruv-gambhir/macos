@@ -1,20 +1,31 @@
-const stickyCloseButton = document.getElementById("stickyCloseButton");
+const stickyCloseButton = document.getElementById("stickiesCloseButton");
 const weatherCloseButton = document.getElementById("weatherCloseButton");
-const stickyApp = document.getElementById("stickyIcon");
-const stickyNote = document.getElementById("stickyApp");
+const stickiesIcon = document.getElementById("stickiesIcon");
+const stickiesApp = document.getElementById("stickiesApp");
 const weatherIcon = document.getElementById("weatherIcon");
 const weatherApp = document.getElementById("weatherApp");
 const currentAppMenuButton = document.getElementById("currentAppMenuButton");
-const stickyAppDropDown = document.getElementById("stickyAppDropDown");
+const stickiesAppDropDown = document.getElementById("stickiesAppDropDown");
 const voiceMemoCloseButton = document.getElementById("voiceMemoCloseButton");
 const voiceMemoApp = document.getElementById("voiceMemoApp");
+const voiceMemoIcon = document.getElementById("voiceMemoIcon");
+const logo = document.getElementById("logo");
+const appleLogoDropDown = document.getElementById("appleLogoDropDown");
 
-stickyCloseButton.addEventListener("click", () => {
-    stickyNote.style.display = "none";
+logo.addEventListener("click", () => {
+    if (appleLogoDropDown.style.display == "block") {
+        appleLogoDropDown.style.display = "none";
+    } else {
+        appleLogoDropDown.style.display = "block";
+    }
 });
 
-stickyApp.addEventListener("click", () => {
-    stickyNote.style.display = "block";
+stickyCloseButton.addEventListener("click", () => {
+    stickiesApp.style.display = "none";
+});
+
+stickiesIcon.addEventListener("click", () => {
+    stickiesApp.style.display = "block";
     currentAppMenuButton.textContent = "Stickies";
 });
 
@@ -27,10 +38,10 @@ weatherIcon.addEventListener("click", () => {
 });
 
 currentAppMenuButton.addEventListener("click", () => {
-    if (stickyAppDropDown.style.display == "none") {
-        stickyAppDropDown.style.display == "block";
+    if (currentAppMenuButton.textContent == "Stickies") {
+        stickiesAppDropDown.style.display = "block";
     } else {
-        stickyAppDropDown.style.display == "none";
+        stickiesAppDropDown.style.display = "none";
     }
 });
 

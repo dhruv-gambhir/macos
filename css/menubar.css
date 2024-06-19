@@ -12,15 +12,27 @@
     border: none;
 }
 
-#stickyAppDropDown {
+#stickiesAppDropDown {
     display: flex;
     flex-direction: column;
-    background-color: lightgray;
-    opacity: 50;
+    opacity: 0.5;
+    width: 100px;
+    display: none;
+    margin-left: 50px;
+}
+
+#stickiesAppDropDown button {
+    width: 100px;
+}
+
+#appleLogoDropDown {
+    display: flex;
+    flex-direction: column;
+    opacity: 0.5;
     width: 100px;
     display: none;
 }
 
-#stickyAppDropDown button {
+#appleLogoDropDown button {
     width: 100px;
 }
