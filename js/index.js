@@ -11,6 +11,7 @@ const voiceMemoApp = document.getElementById("voiceMemoApp");
 const voiceMemoIcon = document.getElementById("voiceMemoIcon");
 const logo = document.getElementById("logo");
 const appleLogoDropDown = document.getElementById("appleLogoDropDown");
+const launchpadIcon = document.getElementById("launchpadIcon");
 
 logo.addEventListener("click", () => {
     if (appleLogoDropDown.style.display == "block") {
@@ -51,4 +52,8 @@ voiceMemoIcon.addEventListener("click", () => {
 
 voiceMemoCloseButton.addEventListener("click", () => {
     voiceMemoApp.style.display = "none";
+});
+
+launchpadIcon.addEventListener("click", () => {
+    window.location.href = "pages/launchpad.html";
 });
